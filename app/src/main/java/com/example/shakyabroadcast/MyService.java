@@ -11,6 +11,11 @@ public class MyService extends Service {
     private int hour = 0, minute = 0, second = 0;
 
     @Override
+    public IBinder onBind(Intent intent) {
+        throw new UnsupportedOperationException("Not yet implemented");
+    }
+
+    @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         flag = intent.getBooleanExtra("flag", false);
 
