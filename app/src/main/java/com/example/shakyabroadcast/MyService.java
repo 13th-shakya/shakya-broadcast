@@ -36,15 +36,15 @@ public class MyService extends Service {
                         hour++;
                     }
                 }
-            }
 
-            Intent i = new Intent("MyMessage");
-            Bundle bundle = new Bundle();
-            bundle.putInt("hour", hour);
-            bundle.putInt("minute", minute);
-            bundle.putInt("second", second);
-            i.putExtras(bundle);
-            sendBroadcast(i);
+                Intent i = new Intent("MyMessage");
+                Bundle bundle = new Bundle();
+                bundle.putInt("hour", hour);
+                bundle.putInt("minute", minute);
+                bundle.putInt("second", second);
+                i.putExtras(bundle);
+                sendBroadcast(i);
+            }
         }).start();
 
         return START_STICKY;
